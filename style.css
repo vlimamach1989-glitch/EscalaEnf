@@ -1,0 +1,909 @@
+
+/* RESET E VARIÁVEIS GLOBAL */
+:root {
+    /* Fundos */
+    --bg-principal: #F5F7FA;
+    --bg-cards: #FFFFFF;
+    --bg-cards-2: #F8FBFF;
+    
+    /* Menu */
+    --menu-principal: #1E3A5F;
+    --menu-secundario: #2F5D8A;
+    
+    /* Alertas e Cards Especiais */
+    --card-alerta: #FFF8E1;
+    
+    /* Tipografia (Títulos e Textos) */
+    --titulo-principal: #183B56;
+    --subtitulo: #4B5563;
+    --paragrafo-principal: #6B7280;
+    --paragrafo-secundario: #9CA3AF;
+    
+    /* Botões e Ações */
+    --btn-principal: #1976D2;
+    --btn-secundario: #2E7D32;
+    --btn-terciario: #6C757D;
+    
+    /* Estados das Informações */
+    --status-sucesso: #4CAF50;
+    --status-atencao: #FFC107;
+    --status-erro: #D32F2F;
+    --status-informacao: #2196F3;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+}
+
+:root {
+  --primary-blue: #0056b3;
+  --primary-hover: #004085;
+  --text-dark: #1e293b;
+  --text-muted: #64748b;
+  --bg-input: #f8fafc;
+  --border-color: #e2e8f0;
+  --green-accent: #16a34a;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+}
+
+/* LAYOUT PRINCIPAL (DESKTOP) */
+.login-wrapper {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
+              url('./IMG/fundoLogin3.png') center/cover no-repeat;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* HEADER / LOGO */
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  z-index: 2;
+}
+
+.hospital-logo {
+  font-size: 2.5rem;
+  color: var(--primary-blue);
+  margin-bottom: 0.2rem;
+}
+
+.logo-sub {
+  font-size: 0.9rem;
+  color: #334155;
+  letter-spacing: 1px;
+}
+
+.logo-title {
+  font-size: 1.8rem;
+  color: #0f172a;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+/* CARD DE LOGIN */
+.login-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+  z-index: 2;
+  margin: 1.5rem 0;
+}
+
+.drag-handle {
+  display: none;
+}
+
+.card-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.card-header h2 {
+  font-size: 1.5rem;
+  color: #0f172a;
+  font-weight: 700;
+}
+
+.card-header p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+}
+
+/* FORMULÁRIO */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 1rem;
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 1rem;
+  color: #94a3b8;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.85rem 2.5rem;
+  background-color: var(--bg-input);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: var(--text-dark);
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.input-group input:focus {
+  border-color: var(--primary-blue);
+  background-color: #fff;
+  box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.1);
+}
+
+/* OPÇÕES */
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.825rem;
+  margin: 0.2rem 0;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-dark);
+  cursor: pointer;
+  user-select: none;
+}
+
+.forgot-password {
+  color: #0284c7;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+/* BOTÕES */
+.btn {
+  width: 100%;
+  padding: 0.85rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: background 0.2s;
+}
+
+.btn-primary {
+  background-color: var(--primary-blue);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+}
+
+.btn-secondary {
+  background-color: #f8fafc;
+  color: var(--green-accent);
+  border: 1px solid #cbd5e1;
+}
+
+.btn-secondary:hover {
+  background-color: #f1f5f9;
+}
+
+/* CARD FOOTER */
+.card-footer {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.badge-shield {
+  width: 32px;
+  height: 32px;
+  background-color: #e0f2fe;
+  color: #0284c7;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+}
+
+.copyright {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  line-height: 1.3;
+}
+
+/* SEÇÃO RECURSOS (DESKTOP) */
+.features-section {
+  width: 100%;
+  background: #ffffff;
+  padding: 1.5rem 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  border-top: 1px solid var(--border-color);
+  z-index: 2;
+}
+
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 160px;
+}
+
+.feature-icon {
+  font-size: 1.25rem;
+  color: var(--primary-blue);
+  margin-bottom: 0.5rem;
+}
+
+.feature-card h3 {
+  font-size: 0.85rem;
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+.feature-card p {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 0.1rem;
+}
+
+.mobile-footer-banner {
+  display: none;
+}
+/* Esconde todas as abas por padrão */
+.hsl-tab-content {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Mostra e anima a aba ativa */
+.hsl-tab-content.hsl-active-tab {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    animation: hslFadeIn 0.4s forwards;
+}
+
+@keyframes hslFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+/*Gerencia*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    background-color: var(--bg-principal);
+}
+
+.hsl-app-container {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* Botão Hambúrguer oculto no desktop */
+.hsl-hamburger-btn {
+    display: none;
+}
+
+/* Sidebar padrão (Desktop) */
+.hsl-sidebar {
+    width: 260px;
+    background-color: var(--menu-principal);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5rem 1rem;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+}
+
+.hsl-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+.hsl-brand-icon {
+    width: 36px;
+    height: 36px;
+    background-color: #2196f3;
+    color: #fff;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.hsl-brand-text h1 { font-size: 0.85rem; color: #b8aa94; font-weight: 400; }
+.hsl-brand-text h2 { font-size: 1.1rem; color: #ffffff; }
+
+.hsl-nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    flex-grow: 1;
+}
+
+.hsl-nav-item {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    padding: 0.75rem 1rem;
+    color: #b7b894;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+.hsl-nav-item:hover, .hsl-nav-item.hsl-active {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #ffffff;
+}
+
+.hsl-logout { color: #f87171; }
+
+.hsl-main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+    overflow-y: auto;
+    /* Remova o max-height se houver e ajuste para min-height: 100vh */
+    min-height: 100vh;
+}
+
+.hsl-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    color: var(--titulo-principal);
+}
+
+.hsl-breadcrumb h2 { font-size: 1.4rem; }
+.hsl-breadcrumb p { font-size: 0.85rem; color: var(--subtitulo); }
+
+.hsl-user-profile-top {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.hsl-date-time { font-size: 0.85rem; color: #cbd5e1; }
+
+.hsl-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.hsl-avatar img { width: 100%; height: 100%; object-fit: cover; }
+
+.hsl-dashboard-card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 1.75rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;    
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.hsl-main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Joga o card para cima e o rodapé para o fundo */
+    padding: 2rem;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+/* Estilo padrão (Desktop) */
+.hsl-desktop-features-footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    background: var(--card-alerta); /* #FFF8E1 */
+    padding: 1.5rem 1.25rem;
+    border-radius: 16px;
+    margin-top: auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid #FFE0B2; /* Uma bordinha sutil um pouco mais escura */
+}
+
+.hsl-feat-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.hsl-feat-icon {
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.hsl-feat-col h4 {
+    font-size: 0.85rem;
+    color: #1e293b;
+}
+
+.hsl-feat-col p {
+    font-size: 0.75rem;
+    color: #64748b;
+}
+
+
+
+/*colaboradores*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    background-color: var(--bg-principal);
+}
+
+.hsl-app-container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Botão Hambúrguer (Oculto no Desktop) */
+.hsl-hamburger-btn {
+    display: none;
+}
+
+/* Menu Lateral */
+.hsl-sidebar {
+    width: 280px;
+    background-color: var(--menu-principal);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5rem 1rem;
+    height: 100vh;
+}
+
+.hsl-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+.hsl-brand-icon {
+    width: 36px;
+    height: 36px;
+    background-color: var(--status-informacao);
+    color: #fff;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.hsl-brand-text h1 { font-size: 0.85rem; color: var(--paragrafo-secundario); font-weight: 400; }
+.hsl-brand-text h2 { font-size: 1.1rem; color: #ffffff; }
+
+.hsl-nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    flex-grow: 1;
+}
+
+.hsl-nav-item {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    padding: 0.75rem 1rem;
+    color: var(--paragrafo-secundario);
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+}
+
+.hsl-nav-item:hover, .hsl-nav-item.hsl-active {
+    background-color: var(--menu-secundario);
+    color: #ffffff;
+}
+
+.hsl-logout { color: #f87171; }
+
+/* Conteúdo Principal */
+.hsl-main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Empurra o rodapé para o fim absoluto da tela */
+    padding: 2rem;
+    height: 100vh;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.hsl-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.hsl-breadcrumb h2 { font-size: 1.4rem; color: var(--titulo-principal); }
+.hsl-breadcrumb p { font-size: 0.85rem; color: var(--paragrafo-principal); }
+
+.hsl-user-profile-top {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.hsl-date-time { font-size: 0.85rem; color: var(--paragrafo-principal); }
+
+.hsl-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.hsl-avatar img { width: 100%; height: 100%; object-fit: cover; }
+
+/* Card Principal com o Calendário e Alerta */
+.hsl-dashboard-card {
+    background-color: var(--bg-cards);
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+/* Alerta de Treinamento */
+.hsl-alert-card {
+    background-color: var(--card-alerta);
+    border: 1px solid #FFE0B2;
+    border-radius: 12px;
+    padding: 0.85rem 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    max-width: 320px;
+    margin-left: auto;
+}
+
+.hsl-alert-icon { font-size: 1.25rem; }
+.hsl-alert-text h4 { font-size: 0.85rem; color: #8D6E63; font-weight: 600; }
+.hsl-alert-text p { font-size: 0.75rem; color: #795548; }
+
+/* Calendário */
+.hsl-calendar-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.hsl-calendar-header h3 { font-size: 1.1rem; color: var(--titulo-principal); }
+.hsl-cal-nav { background: none; border: none; font-size: 1rem; cursor: pointer; color: var(--paragrafo-principal); }
+
+.hsl-calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+    text-align: center;
+}
+
+.hsl-cal-day-name {
+    font-size: 1.05rem !important;
+    font-weight: 700 !important;
+    color: var(--titulo-principal) !important;
+}
+
+.hsl-cal-cell {
+    min-height: 67.5px !important; /* Reduzido 10% de 75px */
+    font-size: 1.215rem !important; /* Reduzido 10% de 1.35rem */
+    font-weight: 600 !important;   /* Mantém o número encorpado e visível */
+    border-radius: 9px !important; /* Proporcional ao ajuste */
+}
+
+.hsl-cal-cell.hsl-muted { color: var(--paragrafo-secundario); background-color: #FAFAFA; }
+.hsl-cal-cell.hsl-blue-event { background-color: #E3F2FD; color: #f70505; font-weight: 600; }
+.hsl-cal-cell span { font-size: 0.6rem; color: #1976D2; margin-top: 2px; }
+
+/* Rodapé de Recursos (Grudado embaixo) */
+.hsl-desktop-features-footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    background: var(--card-alerta);
+    padding: 1.25rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    border: 1px solid #FFE0B2;
+}
+
+.hsl-feat-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.hsl-feat-icon { font-size: 1.25rem; margin-bottom: 0.25rem; }
+.hsl-feat-col h4 { font-size: 0.85rem; color: var(--titulo-principal); font-weight: 600; }
+.hsl-feat-col p { font-size: 0.75rem; color: var(--paragrafo-principal); }
+
+
+
+
+
+
+
+/* =======================================
+   RESPONSIVIDADE (MOBILE / DISPOSITIVOS PEQUENOS)
+   ======================================= */
+@media (max-width: 768px) {
+  .login-wrapper {
+    justify-content: flex-start;
+    background-position: top center;
+  }
+
+  .logo-container {
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Card adaptado para o estilo "Sheet" na parte inferior do mobile */
+  .login-card {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    margin: auto 0 0 0;
+    padding: 1rem 1.5rem 2rem 1.5rem;
+    max-width: 100%;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Indicador visual de "arrastar" comum no mobile */
+  .drag-handle {
+    display: block;
+    width: 36px;
+    height: 4px;
+    background-color: #cbd5e1;
+    border-radius: 2px;
+    margin: 0 auto 1.2rem auto;
+  }
+
+  .features-section {
+    display: none; /* Oculta a lista do desktop */
+  }
+
+  /* Banner escuro com eletrocardiograma do Mobile */
+  .mobile-footer-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #03254c;
+    width: 100%;
+    padding: 1.5rem 1rem 2rem 1rem;
+    color: #ffffff;
+    text-align: center;
+  }
+
+  .pulse-wave {
+    width: 120px;
+    height: 35px;
+    margin-bottom: 0.5rem;
+  }
+
+  .mobile-footer-banner p {
+    font-size: 0.8rem;
+    color: #e2e8f0;
+    line-height: 1.3;
+  }
+
+
+
+  /*gerencia*/
+
+  .hsl-app-container {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    }
+
+    /* Mostra o botão hambúrguer no topo */
+    .hsl-hamburger-btn {
+        display: block;
+        position: fixed;
+        top: 1rem;
+        left: 1rem;
+        z-index: 1000;
+        background: #2196f3;
+        color: white;
+        border: none;
+        font-size: 1.5rem;
+        padding: 0.5rem 0.75rem;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    /* Esconde o menu por padrão para fora da tela */
+    .hsl-sidebar {
+        position: fixed;
+        top: 0;
+        left: -280px;
+        width: 260px;
+        height: 100%;
+        z-index: 999;
+        transition: left 0.3s ease;
+    }
+
+    /* Classe ativada via JS para mostrar o menu */
+    .hsl-sidebar.hsl-show-menu {
+        left: 0;
+    }
+
+    .hsl-main-content {
+        padding: 5rem 1rem 1rem 1rem; /* Dá espaço para o botão hambúrguer fixo */
+    }
+    .hsl-desktop-features-footer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        background: #ffffff;
+        padding: 1rem;
+        border-radius: 12px;
+        margin-top: 1.5rem;
+    }
+
+
+
+    /*COLABORADORES*/
+   .hsl-app-container {
+        flex-direction: column;
+        overflow-x: hidden;
+    }
+    
+    /* Botão Hambúrguer visível e flutuante */
+    .hsl-hamburger-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 1rem;
+        left: 1rem;
+        z-index: 1000;
+        background: var(--btn-principal);
+        color: white;
+        border: none;
+        font-size: 1.25rem;
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+        cursor: pointer;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    /* Menu Lateral Escondido por padrão na tela pequena */
+    .hsl-sidebar {
+        position: fixed;
+        top: 0;
+        left: -280px; /* Joga o menu para fora da tela à esquerda */
+        width: 280px;
+        height: 100vh;
+        z-index: 999;
+        transition: left 0.3s ease-in-out; /* Animação suave */
+        box-shadow: 5px 0 15px rgba(0,0,0,0.2);
+    }
+
+    /* CLASSE QUE O JS ADICIONA PARA MOSTRAR O MENU */
+    .hsl-sidebar.hsl-show-menu {
+        left: 0; /* Traz o menu para dentro da tela */
+    }
+
+    .hsl-main-content {
+        padding: 4.5rem 1rem 1rem 1rem;
+        height: auto;
+        overflow-y: visible;
+    }
+    
+    .hsl-desktop-features-footer {
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 1.5rem;
+    }
+}

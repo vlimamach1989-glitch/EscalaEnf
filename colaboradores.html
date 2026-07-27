@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital São Lucas - Painel do Funcionário</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="hsl-app-container">
+        
+        <!-- BOTÃO HAMBURGUER (Mobile) -->
+        <button class="hsl-hamburger-btn" id="hslHamburger">☰</button>
+
+        <!-- MENU LATERAL -->
+        <aside class="hsl-sidebar" id="hslSidebar">
+            <div class="hsl-brand">
+                <div class="hsl-brand-icon">+</div>
+                <div class="hsl-brand-text">
+                    <h1>Hospital</h1>
+                    <h2>São Lucas</h2>
+                </div>
+            </div>
+<nav class="hsl-nav-menu">
+    <a href="#" class="hsl-nav-item hsl-active" data-target="painel-funcionario"><span>📅</span> Minha Escala</a>
+    <!--<a href="#" class="hsl-nav-item" data-target="minha-escala"><span></span></a>-->
+    <a href="#" class="hsl-nav-item" data-target="solicitacoes"><span>📋</span> Solicitações</a>
+    <a href="#" class="hsl-nav-item" data-target="treinamento"><span>🎓</span> Treinamento</a>
+    <a href="#" class="hsl-nav-item" data-target="perfil-documentos"><span>📁</span>Aisos</a>
+    <a href="#" class="hsl-nav-item" data-target="configuracoes"><span>⚙️</span> Configurações</a>
+</nav>
+<div class="hsl-sidebar-footer">
+        <a href="index.html" class="hsl-nav-item hsl-logout"><span>🚪</span> Sair</a>
+    </div>
+</aside>
+        </aside>
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <main class="hsl-main-content">
+            <header class="hsl-topbar">
+                <div class="hsl-breadcrumb">
+                    <h2>Minha Agenda e Escala</h2>
+                    <p>Sistema de Gerenciamento Hospitalar</p>
+                </div>
+                <div class="hsl-user-profile-top">
+                    <span class="hsl-date-time">27 de julho de 2026, 14:02</span>
+                    <div class="hsl-avatar">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" alt="Perfil">
+                    </div>
+                </div>
+            </header>
+
+  <!-- ALERTA DE TREINAMENTO -->
+                <div class="hsl-alert-card">
+                    <div class="hsl-alert-icon">⚠️</div>
+                    <div class="hsl-alert-text">
+                        <h4>Atenção</h4>
+                        <p>Atualização de Treinamento Obrigatório. Atualização do Sistema.</p>
+                    </div>
+                </div>
+
+
+            <!-- CARD PRINCIPAL (CALENDÁRIO E AVISO) -->
+           <section id="painel-funcionario" class="hsl-conteudo-pagina">
+                
+              
+
+                <!-- CABEÇALHO DO CALENDÁRIO -->
+                <div class="hsl-calendar-header">
+                    <button class="hsl-cal-nav">&lt;</button>
+                    <h3>Julho 2026</h3>
+                    <button class="hsl-cal-nav">&gt;</button>
+                </div>
+
+                <!-- TABELA DO CALENDÁRIO -->
+                <div class="hsl-calendar-grid">
+                    <div class="hsl-cal-day-name">Jan</div>
+                    <div class="hsl-cal-day-name">Mar</div>
+                    <div class="hsl-cal-day-name">Mar</div>
+                    <div class="hsl-cal-day-name">Jul</div>
+                    <div class="hsl-cal-day-name">Out</div>
+                    <div class="hsl-cal-day-name">Sep</div>
+                    <div class="hsl-cal-day-name">Out</div>
+
+                    <!-- Linha 1 -->
+                    <div class="hsl-cal-cell hsl-muted">29</div>
+                    <div class="hsl-cal-cell hsl-muted">29</div>
+                    <div class="hsl-cal-cell hsl-muted">30</div>
+                    <div class="hsl-cal-cell hsl-muted">30</div>
+                    <div class="hsl-cal-cell hsl-muted">31</div>
+                    <div class="hsl-cal-cell hsl-muted">31</div>
+                    <div class="hsl-cal-cell">1</div>
+
+                    <!-- Linha 2 -->
+                    <div class="hsl-cal-cell">1</div>
+                    <div class="hsl-cal-cell">2</div>
+                    <div class="hsl-cal-cell hsl-has-event hsl-blue-event">2<span>2196F3</span></div>
+                    <div class="hsl-cal-cell">3</div>
+                    <div class="hsl-cal-cell">3</div>
+                    <div class="hsl-cal-cell">4</div>
+                    <div class="hsl-cal-cell">4</div>
+
+                    <!-- Linha 3 -->
+                    <div class="hsl-cal-cell">5</div>
+                    <div class="hsl-cal-cell">5</div>
+                    <div class="hsl-cal-cell">6</div>
+                    <div class="hsl-cal-cell">6</div>
+                    <div class="hsl-cal-cell hsl-has-event hsl-blue-event">7<span>2196F3</span></div>
+                    <div class="hsl-cal-cell hsl-has-event hsl-blue-event">8<span>219673</span></div>
+                    <div class="hsl-cal-cell">9</div>
+
+                    <!-- Linha 4 -->
+                    <div class="hsl-cal-cell">9</div>
+                    <div class="hsl-cal-cell">10</div>
+                    <div class="hsl-cal-cell">10</div>
+                    <div class="hsl-cal-cell">11</div>
+                    <div class="hsl-cal-cell">11</div>
+                    <div class="hsl-cal-cell">12</div>
+                    <div class="hsl-cal-cell">12</div>
+
+                    <!-- Linha 5 -->
+                    <div class="hsl-cal-cell">13</div>
+                    <div class="hsl-cal-cell">13</div>
+                    <div class="hsl-cal-cell">14</div>
+                    <div class="hsl-cal-cell">14</div>
+                    <div class="hsl-cal-cell">15</div>
+                    <div class="hsl-cal-cell">15</div>
+                    <div class="hsl-cal-cell">16</div>
+                </div>
+            </section>
+<!-- Seção 2: Minha Escala -->
+    <section id="minha-escala" class="hsl-conteudo-pagina" style="display: none;">
+        <h2>Minha Escala</h2>
+        <p>Conteúdo da escala...</p>
+    </section>
+
+    <!-- Seção 3: Solicitações -->
+    <section id="solicitacoes" class="hsl-conteudo-pagina" style="display: none;">
+        <h2>Solicitações</h2>
+        <p>Conteúdo de solicitações...</p>
+    </section>
+
+    <!-- Seção 4: Treinamento -->
+    <section id="treinamento" class="hsl-conteudo-pagina" style="display: none;">
+        <h2>Treinamento</h2>
+        <p>Conteúdo de treinamento...</p>
+    </section>
+
+    <!-- Seção 5: Perfil e Documentos -->
+    <section id="perfil-documentos" class="hsl-conteudo-pagina" style="display: none;">
+        <h2>Perfil e Documentos</h2>
+        <p>Conteúdo de perfil...</p>
+    </section>
+
+    <!-- Seção 6: Configurações -->
+    <section id="configuracoes" class="hsl-conteudo-pagina" style="display: none;">
+        <h2>Configurações</h2>
+        <p>Conteúdo de configurações...</p>
+    </section>
+
+            <!-- RODAPÉ DE RECURSOS (Grudado no fim) -->
+            <footer class="hsl-desktop-features-footer">
+                <div class="hsl-feat-col">
+                    <span class="hsl-feat-icon">🛡️</span>
+                    <h4>Seguro</h4>
+                    <p>Seus dados protegidos</p>
+                </div>
+                <div class="hsl-feat-col">
+                    <span class="hsl-feat-icon">👥</span>
+                    <h4>Confiável</h4>
+                    <p>Informações precisas em tempo real</p>
+                </div>
+                <div class="hsl-feat-col">
+                    <span class="hsl-feat-icon">📈</span>
+                    <h4>Inteligente</h4>
+                    <p>Gestão eficiente e integrada</p>
+                </div>
+                <div class="hsl-feat-col">
+                    <span class="hsl-feat-icon">❤️</span>
+                    <h4>Humanizado</h4>
+                    <p>Cuidado que faz a diferença</p>
+                </div>
+            </footer>
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

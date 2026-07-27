@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EscalaENf</title>
+      <!-- Ícones do FontAwesome -->
+  <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+    
+
+  <div class="login-wrapper">
+   
+
+    <!-- Card de Login -->
+    <main class="login-card">
+      <div class="drag-handle"></div>
+      
+      <div class="card-header">
+         <!-- Header / Logo (Mobile e Desktop) -->
+    <header class="logo-container">
+      <div class="hospital-logo">
+        <i class="fa-solid fa-square-plus main-cross"></i>
+      </div>
+      <span class="logo-sub">EscalaENf</span>
+     
+    </header>
+
+        <h2>Bem-vindooo</h2>
+        <p>Sistema de Gerenciamento Para Enfermagem</p>
+      </div>
+
+      <form class="login-form" id="loginForm">
+        <!-- Campo Usuário -->
+        <div class="input-group">
+          <i class="fa-regular fa-user input-icon"></i>
+          <input type="text" id="username" placeholder="Usuário ou e-mail" required />
+        </div>
+
+        <!-- Campo Senha -->
+        <div class="input-group">
+          <i class="fa-solid fa-lock input-icon"></i>
+          <input type="password" id="password" placeholder="Senha" required />
+          <i class="fa-regular fa-eye toggle-password" id="togglePassword"></i>
+        </div>
+
+        <!-- Opções (Lembrar-me e Esqueci minha senha) -->
+        <div class="form-options">
+          
+          </label>
+          <a href="#" class="forgot-password">Esqueci minha senha</a>
+        </div>
+
+        <!-- Botões de Ação -->
+        <!--<button type="submit" class="btn btn-primary">
+          <span>Entrar</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>-->
+       
+        <a href="gerencia.html" class="btn btn-primary">
+    <span>PG_ADM</span>
+    <i class="fa-solid fa-arrow-right"></i>
+</a>
+    <a href="colaboradores.html" class="btn btn-primary">
+    <span>PG_Colaboradorres</span>
+    <i class="fa-solid fa-arrow-right"></i>
+</a>
+      </form>
+
+      <!-- Rodapé do Card -->
+      <footer class="card-footer">
+        <div class="badge-shield">
+          <i class="fa-shield-halved"></i>
+        </div>
+        <div class="copyright">
+          <p>© 2026 Nexus Technology and Development</p>
+          <p>Todos os direitos reservados.</p>
+        </div>
+      </footer>
+    </main>
+
+    <!-- Seção de Recursos (Rodapé no Desktop, oculto/adaptado no Mobile) -->
+    <section class="features-section">
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-shield-halved"></i></div>
+        <h3>Seguro</h3>
+        <p>Seus dados protegidos</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-user-group"></i></div>
+        <h3>Confiável</h3>
+        <p>Informações precisas em tempo real</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-chart-simple"></i></div>
+        <h3>Inteligente</h3>
+        <p>Gestão eficiente e integrada</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-heart-pulse"></i></div>
+        <h3>Humanizado</h3>
+        <p>Cuidado que faz a diferença</p>
+      </div>
+    </section>
+
+    <!-- Banner Mobile Footer -->
+    <div class="mobile-footer-banner">
+      <svg class="pulse-wave" viewBox="0 0 100 30" preserveAspectRatio="none">
+        <path d="M0,15 L35,15 L40,5 L45,25 L50,0 L55,30 L60,10 L65,18 L70,15 L100,15" fill="none" stroke="#60a5fa" stroke-width="2"/>
+      </svg>
+      <p>Tecnologia e cuidado<br>caminhando juntos pela vida.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+
+</body>
+</html>

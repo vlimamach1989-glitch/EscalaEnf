@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital São Lucas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="hsl-app-container">
+        
+        <!-- BOTÃO HAMBURGUER (Aparece apenas no mobile) -->
+        <button class="hsl-hamburger-btn" id="hslHamburger">
+            ☰
+        </button>
+
+        <!-- MENU LATERAL -->
+        <aside class="hsl-sidebar" id="hslSidebar">
+            <div class="hsl-brand">
+                <div class="hsl-brand-icon">+</div>
+                <div class="hsl-brand-text">
+                    <h1>Hospital</h1>
+                    <h2>EscalaENf</h2>
+                </div>
+            </div>
+
+            <nav class="hsl-nav-menu">
+                <a href="#" class="hsl-nav-item hsl-active"><span>🏠</span> Cadastro</a>
+                <a href="#" class="hsl-nav-item"><span>👤</span> Setores</a>
+                <a href="#" class="hsl-nav-item"><span>🖥️</span> Visão Geral</a>
+                <a href="#" class="hsl-nav-item"><span>📊</span> Dimencionamento</a>                
+                <a href="#" class="hsl-nav-item"><span>⚙️</span> Configuração</a>
+                <a href="#" class="hsl-nav-item"><span>ℹ️</span> Informações</a>
+                <a href="#" class="hsl-nav-item"><span>❤️</span>Avisos</a>
+            </nav>
+
+            <div class="hsl-sidebar-footer">
+                <a href="index.html" class="hsl-nav-item hsl-logout"><span>🚪</span> Sair</a>
+            </div>
+        </aside>
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <main class="hsl-main-content">
+            <header class="hsl-topbar">
+                <div class="hsl-breadcrumb">
+                    <h2>Visão Geral do Desempenho Hospitalar</h2>
+                    <p>Sistema de Gerenciamento Hospitalar</p>
+                </div>
+                <div class="hsl-user-profile-top">
+                    <span class="hsl-date-time" id="hslDateTime">26 de julho de 2026</span>
+                    <div class="hsl-avatar">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" alt="Perfil">
+                    </div>
+                </div>
+            </header>
+
+          <section class="hsl-dashboard-card" id="hslDashboardCard">
+    
+    <!-- CONTEÚDO DA ABA 1: GERAS (Padrão) -->
+    <div class="hsl-tab-content hsl-active-tab" id="tab-geras">
+        <div class="hsl-dashboard-header">
+            <div class="hsl-legendas">
+                <span class="hsl-legenda-item"><span class="hsl-dot hsl-blue"></span> Informações</span>
+                <span class="hsl-legenda-item"><span class="hsl-dot hsl-green"></span> Success</span>
+            </div>
+        </div>
+        <div class="hsl-chart-container">
+            <p style="text-align:center; padding-top: 60px; color: var(--paragrafo-principal);">Gráfico de Desempenho - Geras</p>
+        </div>
+    </div>
+
+    <!-- CONTEÚDO DA ABA 2: USUÁRIO -->
+    <div class="hsl-tab-content" id="tab-usuario">
+        <h3 style="color: var(--titulo-principal); margin-bottom: 1rem;">Gerenciamento de Usuários</h3>
+        <p style="color: var(--paragrafo-principal);">Aqui você pode visualizar e gerenciar os perfis cadastrados no sistema.</p>
+    </div>
+
+    <!-- CONTEÚDO DA ABA 3: MONITOROS -->
+    <div class="hsl-tab-content" id="tab-monitoros">
+        <h3 style="color: var(--titulo-principal); margin-bottom: 1rem;">Monitores Hospitalares</h3>
+        <p style="color: var(--paragrafo-principal);">Acompanhamento em tempo real dos monitores de sinais vitais e leitos.</p>
+    </div>
+
+    <!-- CONTEÚDO DA ABA 4: INFORMAÇÕES -->
+    <div class="hsl-tab-content" id="tab-informacoes">
+        <h3 style="color: var(--titulo-principal); margin-bottom: 1rem;">Informações Gerais</h3>
+        <p style="color: var(--paragrafo-principal);">Relatórios consolidados e diretrizes operacionais do Hospital São Lucas.</p>
+    </div>
+
+    <!-- CONTEÚDO DA ABA 5: INTELIGENTE -->
+    <div class="hsl-tab-content" id="tab-inteligente">
+        <h3 style="color: var(--titulo-principal); margin-bottom: 1rem;">Painel Inteligente</h3>
+        <p style="color: var(--paragrafo-principal);">Análises preditivas baseadas em inteligência artificial para gestão de leitos.</p>
+    </div>
+
+    <!-- CONTEÚDO DA ABA 6: GESTOS -->
+    <div class="hsl-tab-content" id="tab-gestos">
+        <h3 style="color: var(--titulo-principal); margin-bottom: 1rem;">Configuração de Gestos</h3>
+        <p style="color: var(--paragrafo-principal);">Ajustes de atalhos e comandos rápidos do sistema.</p>
+    </div>
+
+    <!-- CONTEÚDO DA ABA 7: HUMANIZADO -->
+    <div class="hsl-tab-content" id="tab-humanizado">
+        <h3 style="color: var(--titulo-principal); margin-bottom: 1rem;">Atendimento Humanizado</h3>
+        <p style="color: var(--paragrafo-principal);">Métricas de satisfação e feedback dos pacientes e familiares.</p>
+    </div>
+
+</section>
+
+            <!-- RODAPÉ DE RECURSOS -->
+            <footer class="hsl-desktop-features-footer">
+                <div class="hsl-feat-col">
+                    <span class="hsl-feat-icon">🛡️</span>
+                    <h4>Seguro</h4>
+                    <p>Seus dados protegidos</p>
+                </div>
+                <div class="hsl-feat-col">
+                    <span class="hsl-feat-icon">👥</span>
+                    <h4>Confiável</h4>
+                    <p>Informações precisas em tempo real</p>
+                </div>
+                <div class="hsl-feat-col">
+                    <span class="hsl-feat-icon">📈</span>
+                    <h4>Inteligente</h4>
+                    <p>Gestão eficiente e integrada</p>
+                </div>
+                <div class="hsl-feat-col">
+                    <span class="hsl-feat-icon">❤️</span>
+                    <h4>Humanizado</h4>
+                    <p>Cuidado que faz a diferença</p>
+                </div>
+            </footer>
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
